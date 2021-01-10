@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<div style = "margin-top : 100px;" class="jumbotron text-center">
+    <h3>Welcome to the tBlog!</h3>
+    <p>This site encourages you to become what you dream of... </p>
+</div>
+
+<p>
+        {% if request.user.is_authenticated %}
+            Giriş Yapılmış, {{request.user.username}}
+        {% else %}
+            Giriş Yapılmamış
+        {% endif %}
+</p>
+{% endblock body %}
